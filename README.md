@@ -70,7 +70,7 @@ A Flask-based API for parsing and extracting structured information from resume 
 
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/ammar-safi/resume-parser.git
    cd resume_parser
    ```
 2. **Install dependencies:**
