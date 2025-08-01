@@ -26,7 +26,9 @@ def is_readable():
     try:
         file_bytes = ResumeParserService.download_file(file_url)
         is_valid = ResumeParserService.validate_pdf(file_bytes)
-        ats_result = ResumeParserService.check_ats_compliance(file_bytes) if is_valid else {"ats_compliant": False, "fields": {}, "error": "PDF not readable"}
+        if not is_valid:
+            return ResponseHandler.validation_error(f"PDF is not readable (might be scanned image or contains less than {ResumeParserService.MIN_WORDS_THRESHOLD} words)", {"is_readable": False, "ats_compliant": False, "fields": {}})
+        ats_result = ResumeParserService.check_ats_compliance(file_bytes)
         return ResponseHandler.success({"is_readable": is_valid, **ats_result}, message="PDF readability and ATS compliance check completed.")
     except Exception as e:
         return ResponseHandler.server_error(str(e))

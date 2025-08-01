@@ -4,6 +4,8 @@ import io
 import os
 
 class ResumeParserService:
+    MIN_WORDS_THRESHOLD = 50
+
     @staticmethod
     def download_file(file_url: str) -> bytes:
         """
@@ -40,7 +42,7 @@ class ResumeParserService:
                 if page_text:
                     text += page_text.strip()
             # Consider it valid if there is a reasonable amount of text
-            return len(text) > 50  # Threshold can be adjusted
+            return len(text.split()) > ResumeParserService.MIN_WORDS_THRESHOLD
         except Exception:
             return False
 
