@@ -1,0 +1,50 @@
+{
+  "full_name": "",
+  "email": "",
+  "phone": "",
+  "location": "",
+  "links": {
+    "github": "",
+    "linkedin": "",
+    "portfolio": ""
+  },
+  "work_experience": [
+    {
+      "Company Name": "Darribne",
+      "location": "Syria, IN",
+      "description": "Some information about this company",
+      "job_title": "Backend Developer ",
+      "start_date": "03/2025",
+      "end_date": "",
+      "projects": [
+        "We work on ERB project",
+        "Make login system for the project"
+      ]
+    },
+    {
+      "Company Name": "Darribne",
+      "location": "Syria, IN",
+      "description": "Some information about this company",
+      "job_title": "Backend Developer ",
+      "start_date": "03/2025",
+      "end_date": "",
+      "projects": [
+        "We work on ERB project",
+        "Make login system for the project"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "university_name": "",
+      "graduate_date": "",
+      "location": "",
+      "GPA": ""
+    }
+  ],
+  "additional_info": {
+    "skills": [],
+    "interests": [],
+    "volunteer": []
+  }
+}
